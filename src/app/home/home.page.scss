@@ -1,0 +1,164 @@
+/* Ajuste para centralizar o container */
+#container {
+  text-align: center; /* Centraliza o conteúdo dentro do container */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Centraliza verticalmente o container */
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px; /* Estiliza o texto em negrito no container */
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c; /* Cor do texto */
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none; /* Remove o sublinhado de links */
+}
+
+/* Estilo responsivo para o contêiner da logo */
+.logo-container {
+  display: flex;
+  justify-content: center; /* Centraliza a logo horizontalmente */
+  width: 100%;
+}
+
+/* Responsivo para a logo */
+.logo {
+  max-width: 270px;
+  height: auto; /* A logo ajusta-se proporcionalmente */
+}
+
+.texto-h1 {
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.texto-h1 h1 {
+  color: #808080; /* Cor cinza do texto */
+  font-weight: bold; /* Negrito */
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-size: 42px; /* Tamanho da fonte do h1 */
+}
+
+.texto-h1 h1 br {
+  display: block; /* Força a quebra de linha no h1 */
+}
+
+.descricao-home {
+  color: #808080; /* Cor cinza */
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-size: 60px; /* Tamanho do texto grande */
+}
+
+.descricao-home {
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards se ajustem em várias linhas */
+  justify-content: space-between; /* Espaço uniforme entre os cards */
+}
+
+/* Cards ajustáveis para mobile e desktop */
+.custom-card, .custom-card-descricao {
+  width: 100%; /* Full width para dispositivos móveis */
+  margin-bottom: 1px;
+  background-color: #eb7501; /* Cor de fundo dos cards */
+}
+
+.card-buttons h1 {
+  font-size: 30px;
+  font-weight: bold; /* Título em negrito dentro dos cards */
+  margin-bottom: 10px;
+  color: #ffffff; /* Cor do texto branca */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos responsivos para telas maiores */
+@media (min-width: 768px) {
+  .custom-card, .custom-card-descricao {
+    width: 48%; /* Divide os cards em dois lados em telas maiores */
+  }
+
+  .texto-h1 h1 {
+    font-size: 42px; /* Ajusta o tamanho da fonte para telas maiores */
+  }
+
+  .descricao-home h1 {
+    font-size: 40px;
+  }
+
+  .descricao-home h2 {
+    font-size: 35px;
+  }
+
+  .descricao-home p {
+    font-size: 18px;
+  }
+
+  .card-buttons h1 {
+    font-size: 40px;
+  }
+}
+
+.card-buttons {
+  display: flex;
+  flex-direction: column; /* Empilha os botões verticalmente */
+  align-items: stretch; /* Alinha os botões para ocupar toda a largura */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column; /* Organiza os botões em uma coluna */
+  width: 100%; /* O container ocupa toda a largura */
+}
+
+.custom-button {
+  background-color: #eb7501; /* Cor de fundo do botão */
+  color: #ffffff; /* Cor do texto dos botões */
+  margin: 10px 0; /* Margem vertical entre os botões */
+  flex: 1; /* Faz com que todos os botões tenham o mesmo tamanho */
+  width: 100%; /* Faz os botões ocuparem toda a largura disponível */
+  text-align: center; /* Centraliza o texto dos botões */
+  height: 100%; /* Faz os botões ocuparem toda a altura do container */
+}
+
+/* Alinhamento e estilo do h1 dos botões */
+.card-buttons h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff; /* Texto branco nos botões */
+  text-align: center; /* Centraliza o título dos botões */
+}
+
+/* Centralizar o card e ocupar o restante da tela */
+.card-container {
+  display: flex;
+  flex-direction: column; /* Organiza os cards verticalmente */
+  justify-content: center; /* Centraliza os cards verticalmente */
+  align-items: center; /* Centraliza os cards horizontalmente */
+  height: 40%; /* Define a altura do container */
+}
+
+.custom-card {
+  width: 90%; /* Largura do card ajustada para 90% da tela */
+  max-width: 500px; /* Largura máxima em telas maiores */
+  background-color: #eb7501; /* Cor de fundo */
+  margin: 0 auto; /* Centraliza o card */
+  flex-grow: 1; /* Faz o card crescer para ocupar o espaço vertical disponível */
+}

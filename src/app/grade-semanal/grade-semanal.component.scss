@@ -1,0 +1,99 @@
+/* Estilo para o container da tabela */
+.table-container {
+  overflow: hidden; /* Impede a rolagem na versão web */
+}
+
+/* Estilo para o cabeçalho com os dias da semana */
+.header-days {
+  background-color: #eb7501; /* Cor de fundo para os dias da semana */
+  font-weight: bold; /* Negrito para os títulos dos dias */
+  text-align: center; /* Alinhar texto ao centro */
+  color: #ffffff; /* Cor do texto */
+  display: flex; /* Garante que os dias fiquem lado a lado */
+}
+
+.header-days ion-col {
+  padding: 10px; /* Espaçamento interno */
+  border-right: 1px solid #ad5700; /* Linha de separação entre colunas */
+}
+
+.header-days ion-col:last-child {
+  border-right: none; /* Remove a linha de separação da última coluna */
+}
+
+/* Estilo para o subcabeçalho com Turma, Professor, Período */
+.subheader {
+  background-color: #eb7501; /* Cor de fundo para o subcabeçalho */
+  font-weight: bold; /* Negrito para o subcabeçalho */
+  color: #ffffff; /* Cor do texto */
+  display: flex; /* Garante que o subcabeçalho fique lado a lado */
+}
+
+.subheader ion-col {
+  padding: 10px; /* Espaçamento interno */
+  text-align: center; /* Alinhar texto ao centro */
+}
+
+.subheader ion-col:last-child {
+  border-right: none; /* Remove a linha de separação da última coluna */
+}
+
+/* Estilo para as linhas de dados */
+ion-row {
+  margin-bottom: 10px; /* Espaçamento entre linhas de dados */
+  display: flex; /* Garante que as linhas de dados fiquem lado a lado */
+}
+
+ion-col {
+  padding: 8px; /* Espaçamento interno */
+  text-align: center; /* Alinhar texto ao centro */
+  flex: 1; /* As colunas ocupam espaço igual */
+}
+
+ion-col:last-child {
+  border-right: none; /* Remove a linha de separação da última coluna */
+}
+
+/* Alinhamento dos dados com as subcolunas */
+ion-row * {
+  display: flex; /* Garante que os dados dentro das colunas sejam exibidos em linha */
+  flex-direction: column; /* Alinha os itens verticalmente */
+  justify-content: center; /* Centraliza verticalmente */
+}
+
+/* Estilo para a versão mobile */
+@media (max-width: 768px) {
+  .table-container {
+    width: 100%; /* Largura 100% para o container */
+    height: auto; /* Altura automática para caber no conteúdo */
+    overflow-x: auto; /* Permite rolagem horizontal */
+    overflow-y: auto; /* Permite rolagem vertical */
+  }
+  
+  ion-card-content {
+    overflow: hidden; /* Impede rolagem desnecessária */
+  }
+  
+  /* Garante que a tabela ocupe uma largura maior que a tela para rolagem */
+  ion-grid {
+    min-width: 800px; /* Largura mínima para permitir rolagem horizontal */
+    display: block; /* Garante que o grid seja exibido corretamente */
+  }
+}
+
+.dados {
+  margin-bottom: 10px; /* Espaçamento entre linhas de dados */
+  display: flex; /* Garante que as linhas de dados fiquem lado a lado */
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd; 
+  border-top: 1px solid #ddd; 
+}
+
+/* Bordas */
+.subcoluna {
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd; 
+  border-top: 1px solid #ddd; 
+}

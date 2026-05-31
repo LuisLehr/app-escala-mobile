@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Escala de Professores</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Selecione o professor</ion-label>
+    <ion-select (ionChange)="carregarEscala($event)">
+      <ion-select-option *ngFor="let professor of professores" [value]="professor.professor_id">
+        {{ professor.nome }}
+      </ion-select-option>
+    </ion-select>    
+  </ion-item>
+
+  <ion-card *ngIf="professorSelecionado">
+    <ion-card-header>
+      <ion-card-title>Escala de {{ professorSelecionado.nome }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ul *ngIf="!escalaVazia()">
+        <li *ngFor="let dia of diasDaSemana">
+          <strong>{{ dia }}:</strong> {{ escalaProfessor[dia] ? escalaProfessor[dia].join(', ') : 'Sem horários' }}
+        </li>
+      </ul>
+      <p *ngIf="escalaVazia()">Nenhuma escala disponível.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

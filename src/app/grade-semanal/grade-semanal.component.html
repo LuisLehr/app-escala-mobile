@@ -1,0 +1,52 @@
+<!-- Cabeçalho com título e botão de menu -->
+<ion-header>
+  <ion-toolbar>
+    <!-- Título da página -->
+    <ion-title>Grade Semanal</ion-title>
+    <!-- Botão de menu localizado à esquerda (slot="start"), que abre um menu lateral identificado como "main-menu" -->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Conteúdo principal da página -->
+<ion-content>
+  <ion-card>
+    <ion-card-content class="table-container">
+      <ion-grid>
+        <!-- Linha de cabeçalho com os dias da semana -->
+        <ion-row class="header-days">
+          <ion-col>Segunda-feira</ion-col>
+          <ion-col>Terça-feira</ion-col>
+          <ion-col>Quarta-feira</ion-col>
+          <ion-col>Quinta-feira</ion-col>
+          <ion-col>Sexta-feira</ion-col>
+        </ion-row>
+
+        <!-- Subcabeçalho com Turma, Professor, Período -->
+        <ion-row class="subheader">
+          <ion-col *ngFor="let dia of diasDaSemana">
+            <ion-row class="subcoluna">
+              <ion-col>TURMA</ion-col>
+              <ion-col>PROFESSOR</ion-col>
+              <ion-col>PERÍODO</ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+        <!-- Linhas dinâmicas de dados das provas -->
+        <ion-row *ngFor="let rowIndex of [].constructor(getRows()); let i = index">
+          <ion-col *ngFor="let dia of diasDaSemana">
+            <ion-row *ngFor="let prova of getSubjectsForRow(i)" class="dados">
+              <ion-col>{{ prova.turma }}</ion-col>
+              <ion-col>{{ prova.professor }}</ion-col>
+              <ion-col>{{ prova.periodo }}</ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,37 @@
+<!-- Conteudo da página -->
+<ion-content>
+<ion-card>
+  <ion-card-content>
+    <div class="logo-container">
+        <img src="assets/logotipo-leonardo-da-vinci_Prancheta-1.webp" class="logo" />
+    </div>
+  </ion-card-content>
+</ion-card>
+
+   <!-- Card com conteudo da pagina -->
+  <ion-card class="dados">
+    <ion-card-content>
+      <div class="login-card-form">
+        <!-- Div para imagem da tela de login -->
+        <div class="person-img">
+          <img src="assets\person-login.png" class="person" />
+        </div>
+        <br>
+        <!-- Div para customização do h1 -->
+        <div class="h1" style="text-align: center;">
+          <h1>Entre com os dados<br>para fazer login:</h1>
+        </div>
+        <br>
+        <!-- Input para entrada do usuario -->
+        <ion-input label="Usuário:" label-placement="floating" fill="solid" placeholder="Enter text" color="light"></ion-input>
+        <br>
+        <!-- Input para entrada da senha -->
+        <ion-input type="password" label="Senha:" label-placement="floating" fill="solid" placeholder="Enter text"></ion-input>
+        <br>
+        <!-- Botão de login -->
+        <ion-button routerLink="/home" expand="full" color="light" shape="round" class="botao-login">Login</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>  
+</ion-content>
+

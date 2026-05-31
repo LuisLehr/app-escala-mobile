@@ -1,0 +1,36 @@
+<ion-menu side="start" menuId="first" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="warning">
+      <ion-title class="menu">Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/home">Home</ion-item>
+      <ion-item routerLink="/horario-prova">Registrar Horário de Provas</ion-item>
+      <ion-item routerLink="/professor-escala">Escala Professor</ion-item>
+      <ion-item routerLink="/grade-semanal">Grade Semanal</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- Main Content -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      ESCALA ESCOLAR
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" id="main-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>

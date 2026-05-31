@@ -1,0 +1,21 @@
+.card-buttons {
+    display: flex;
+    flex-direction: column; /* Para empilhar os botões verticalmente */
+    align-items: stretch; /* Faz os botões ocuparem toda a largura do container */
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column; /* Alinha os botões na vertical */
+    width: 100%; /* Garante que o container ocupe toda a largura */
+  }
+  
+  .custom-button {
+    background-color: #eb7501; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto */
+    margin: 10px 0; /* Margem entre os botões */
+    flex: 1; /* Faz com que todos os botões ocupem o mesmo espaço */
+    width: 100%; /* Faz os botões ocuparem 100% da largura */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    height: 100%
+  }

@@ -1,0 +1,54 @@
+/* Estilos para o card de dados */
+.dados {
+    background-color: #eb7501; /* Define a cor de fundo do card */
+    top: 0; /* Posiciona o card no topo da tela */
+    left: 51.5%; /* Aproxima o card do centro horizontal */
+    transform: translateX(-54.5%); /* Ajusta o posicionamento horizontal para centralizar */
+    width: 90%; /* Define a largura do card como 90% da tela */
+    max-width: 500px; /* Limita a largura máxima a 500px para telas maiores */
+    height: 80%; /* Define a altura do card */
+    color: #eb7501; /* Define a cor do texto */
+}
+
+/* Estilos para o container da logo */
+.logo-container {
+    display: flex;
+    justify-content: center; /* Centraliza a logo horizontalmente */
+    width: 100%; /* A logo ocupa toda a largura do container */
+    height: 15%; /* Define a altura do container */
+}
+
+/* Estilos responsivos para a logo */
+.logo {
+    max-width: 270px; /* Define a largura máxima da logo */
+    height: auto; /* Mantém a proporção da logo */
+}
+
+/* Estilos para a imagem da pessoa */
+.person-img {
+    display: flex;
+    justify-content: center; /* Centraliza a imagem da pessoa horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+}
+
+/* Estilos para a imagem da pessoa */
+.person {
+    margin-top: 50px; /* Adiciona uma margem no topo da imagem */
+    max-width: 50%; /* Define a largura máxima como 50% do container */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilos para o conteúdo principal da tela */
+.ion-content {
+    background-color: white; /* Define a cor de fundo do conteúdo como branco */
+}
+
+/* Estilos para o título h1 */
+.h1 {
+    color: white; /* Define a cor do texto h1 como branco */
+}
+
+/* Estilos para o botão de login */
+.botao-login {
+    color: #eb7501; /* Define a cor do botão de login */
+}

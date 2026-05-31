@@ -1,0 +1,7 @@
+{
+  "name": "app-escala",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

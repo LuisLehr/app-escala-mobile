@@ -1,0 +1,56 @@
+/* Container para centralizar o card */
+.page-container {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: flex-start; /* Alinha os itens no topo do container */
+  height: 100vh; /* Faz o container preencher a altura total da tela */
+  overflow-y: auto; /* Permite rolagem vertical na página */
+}
+
+/* Cards ajustáveis para mobile e desktop */
+.custom-card, .custom-card-descricao {
+  color: white;
+  width: 90%; /* Full width para mobile */
+  max-width: 500px; /* Limita a largura em telas maiores */
+  margin-bottom: 1px;
+  background-color: #eb7501;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinha o conteúdo do card no topo */
+  height: auto; /* Ajuste para a altura automática */
+  padding: 16px; /* Adiciona um pouco de espaçamento interno */
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .custom-card, .custom-card-descricao {
+    width: 48%; /* Ajusta para dividir o espaço em telas maiores */
+  }
+
+  .descricao-home h1 {
+    font-size: 45px; /* Aumenta o tamanho do texto em telas maiores */
+  }
+
+  .descricao-home h2 {
+    font-size: 40px; /* Aumenta o tamanho do texto */
+  }
+
+  .descricao-home p {
+    font-size: 20px; /* Aumenta o tamanho do texto */
+  }
+}
+
+/* Responsividade para mobile */
+@media (max-width: 767px) {
+  .descricao-home h1 {
+    font-size: 35px; /* Aumenta o tamanho do texto em dispositivos móveis */
+  }
+
+  .descricao-home h2 {
+    font-size: 25px; /* Aumenta o tamanho do texto em dispositivos móveis */
+  }
+
+  .descricao-home p {
+    font-size: 20px; /* Aumenta o tamanho do texto em dispositivos móveis */
+  }
+}

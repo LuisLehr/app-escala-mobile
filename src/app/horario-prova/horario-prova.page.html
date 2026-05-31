@@ -1,0 +1,68 @@
+<!-- Cabeçalho do aplicativo com título e botão de menu -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cadastro de provas</ion-title>
+    <!-- Botão de menu lateral para navegação -->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Conteúdo principal da página -->
+<ion-content>
+  <!-- Card contendo o formulário de cadastro de provas -->
+  <ion-card>
+    <ion-card-header>
+      <!-- Título do card -->
+      <ion-card-title style="text-align: center;">Cadastro de Provas</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form (ngSubmit)="registrarHorario()">
+        <ion-item>
+          <ion-label position="floating">Turma</ion-label>
+          <ion-input type="text" [(ngModel)]="turma" name="turma" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Dia da Semana</ion-label>
+          <ion-select [(ngModel)]="dia" name="dia" required>
+            <ion-select-option value="segunda">Segunda-feira</ion-select-option>
+            <ion-select-option value="terca">Terça-feira</ion-select-option>
+            <ion-select-option value="quarta">Quarta-feira</ion-select-option>
+            <ion-select-option value="quinta">Quinta-feira</ion-select-option>
+            <ion-select-option value="sexta">Sexta-feira</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Período de Prova</ion-label>
+          <ion-select [(ngModel)]="periodo" name="periodo" required>
+            <ion-select-option value="1º ao 3º">1º ao 3º Período</ion-select-option>
+            <ion-select-option value="1º ao 5º">1º, 2º, 4º e 5º Período</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-button expand="block" type="submit" color="warning">Salvar Horário</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Mostrar todos os registros -->
+  <ion-card *ngIf="registros.length > 0">
+    <ion-card-header>
+      <ion-card-title>Registros</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let registro of registros">
+          <p><strong>Turma:</strong> {{ registro.turma }}</p>
+          <p><strong>Dia:</strong> {{ registro.dia }}</p>
+          <p><strong>Período:</strong> {{ registro.periodo }}</p>
+          <p><strong>Professor:</strong> {{ registro.professor}}</p>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

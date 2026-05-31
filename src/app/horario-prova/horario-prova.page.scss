@@ -1,0 +1,19 @@
+/* Adicione isso no seu arquivo horario-prova.page.scss */
+table {
+    width: 100%; /* Define a largura da tabela */
+    border-collapse: collapse; /* Remove o espaço entre as bordas das células */
+  }
+  
+  th, td {
+    padding: 10px; /* Adiciona espaçamento interno */
+    text-align: left; /* Alinha o texto à esquerda */
+    border-bottom: 1px solid #ccc; /* Adiciona uma linha de separação entre as linhas */
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1; /* Altera a cor de fundo ao passar o mouse */
+  }
+  
+  .t{
+    background-color: #ccc;
+  }

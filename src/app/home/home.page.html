@@ -1,0 +1,43 @@
+<!-- Cabeçalho do site com menu para navegação -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Card para o logo -->
+  <ion-card>
+    <ion-card-content>
+      <div class="logo-container">
+          <img src="assets/logotipo-leonardo-da-vinci_Prancheta-1.webp" class="logo" />
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Card para o texto H1 -->
+  <ion-card>
+    <ion-card-content>
+      <div class="texto-h1"> 
+        <h1>Seja bem vindo! <br> Aplicativo de Escala para Provas</h1>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="card-container">
+  <!-- Card com botões para navegação no site -->
+    <ion-card class="custom-card">
+      <ion-card-content>
+        <div class="card-buttons">
+          <h1>Navegue pelo nosso App</h1>
+          <ion-button routerLink="/horario-prova" expand="full" color="light">Registrar Horário de Prova</ion-button>
+          <ion-button routerLink="/professor-escala" expand="full" color="light">Escala Professor</ion-button>
+          <ion-button routerLink="/grade-semanal" expand="full" color="light">Grade Semanal</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
